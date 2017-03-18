@@ -1,0 +1,5 @@
+services:
+  transmission.command:
+    class: Drupal\transmission\Command
+  transmission.parser:
+    class: Drupal\transmission\Parser

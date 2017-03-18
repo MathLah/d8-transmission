@@ -1,0 +1,6 @@
+name: Transmission
+description: Transmission remote control
+package: Transmission
+
+type: module
+core: 8.x

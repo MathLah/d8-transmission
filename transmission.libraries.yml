@@ -1,0 +1,4 @@
+transmission-list:
+  version: 1.x
+  js:
+    js/transmission-list.js: {}

@@ -1,0 +1,41 @@
+transmission.list:
+  path: '/transmission'
+  defaults:
+    _controller: '\Drupal\transmission\Controller\TransmissionController::list'
+    _title: 'Transmission'
+  requirements:
+    _permission: 'access transmission'
+
+transmission.listonly:
+ path: '/transmission/listonly'
+ defaults:
+   _controller: '\Drupal\transmission\Controller\TransmissionController::listonly'
+   _title: 'Transmission Only'
+ options:
+   _theme: ajax_base_page
+ requirements:
+   _permission: 'access transmission'
+
+transmission.start-torrent:
+  path: '/transmission/start/{torrent_id}'
+  defaults:
+    _controller: '\Drupal\transmission\Controller\TransmissionController::start'
+    _title: 'Transmission start torrent'
+  requirements:
+    _permission: 'access transmission'
+
+transmission.stop-torrent:
+  path: '/transmission/stop/{torrent_id}'
+  defaults:
+    _controller: '\Drupal\transmission\Controller\TransmissionController::stop'
+    _title: 'Transmission stop torrent'
+  requirements:
+    _permission: 'access transmission'
+
+transmission.delete-torrent:
+  path: '/transmission/delete/{torrent_id}'
+  defaults:
+    _controller: '\Drupal\transmission\Controller\TransmissionController::delete'
+    _title: 'Transmission delete torrent'
+  requirements:
+    _permission: 'access transmission'

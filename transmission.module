@@ -1,0 +1,31 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Mathieu
+ * Date: 04/03/2017
+ * Time: 21:36
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function transmission_theme($existing, $type, $theme, $path) {
+    return array(
+        'transmission_list_page' => array(
+            'variables' => array(
+                'upload_form' => NULL,
+            ),
+        ),
+        'transmission_list' => array(
+            'variables' => array(
+                'data' => NULL,
+            ),
+        ),
+        'transmission_element' => array(
+            'variables' => array(
+                'header' => NULL,
+                'torrent_data' => NULL,
+            ),
+        ),
+    );
+}

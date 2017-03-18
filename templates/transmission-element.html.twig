@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8">
+            <p>{{ torrent_data.name }}</p>
+        </div>
+        <div class="col-lg-4">
+            <div class="btn-group" role="group" aria-label="">
+                <a class="btn btn-default bg-success alert-success" href="{{  path('transmission.start-torrent', {'torrent_id': torrent_data.id}) }}"><i class="glyphicon glyphicon-play"></i> Start</a>
+                <a class="btn btn-default bg-info alert-info" href="{{  path('transmission.stop-torrent', {'torrent_id': torrent_data.id}) }}"><i class="glyphicon glyphicon-pause"></i> Pause</a>
+                <a class="btn btn-default bg-danger alert-danger" href="{{  path('transmission.delete-torrent', {'torrent_id': torrent_data.id}) }}"><i class="glyphicon glyphicon-remove"></i> Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            Downloaded : {{ torrent_data.have }}
+        </div>
+        <div class="col-lg-3">
+            D/U : {{ torrent_data.download }}/{{ torrent_data.upload }}
+        </div>
+        <div class="col-lg-2">
+            Ratio : {{ torrent_data.ratio }}
+        </div>
+        <div class="col-lg-2">
+            Done : {{ torrent_data.done }}
+        </div>
+        <div class="col-lg-2">
+            ETA : {{ torrent_data.eta }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ torrent_data.done }};">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
