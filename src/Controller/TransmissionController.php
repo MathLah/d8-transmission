@@ -27,11 +27,8 @@ class TransmissionController extends ControllerBase {
      *      - transmission_form
      */
     public function list() {
-        $output = NULL;
-        $uploadForm = \Drupal::formBuilder()->getForm('Drupal\transmission\Form\UploadForm');
         return array(
             '#theme' => 'transmission_list_page',
-            '#upload_form' => $uploadForm,
             '#attached' => array(
                 'library'=> array('transmission/transmission-list')
             )
